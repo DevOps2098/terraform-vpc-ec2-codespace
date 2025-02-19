@@ -18,5 +18,5 @@ module "ec2" {
   source            = "./modules/ec2"
   public_subnet_id  = module.vpc.public_subnet_ids[0]  # First public subnet
   private_subnet_id = module.vpc.private_subnet_ids[0] # First private subnet
-  security_group_id = module.vpc.security_group_id
+  vpc_security_group_ids = module.vpc.security_group_id
 }
